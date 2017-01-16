@@ -1,8 +1,10 @@
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
+/**
+ * @author Ievgenii Drozd
+ * @version 1/13/17
+ *          Day 0: Hello, World.
+ */
 public class Solution {
     public static void main(String[] args) {
         // Create a Scanner object to read input from stdin.
@@ -18,6 +20,5 @@ public class Solution {
         // Print a string literal saying "Hello, World." to stdout.
         System.out.println("Hello, World.");
         System.out.println(inputString);
-
     }
 }

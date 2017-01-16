@@ -3,7 +3,7 @@ import java.util.*;
 /**
  * @author Ievgenii Drozd
  * @version 1/13/17
- * Day 1: Data Types
+ *          Day 1: Data Types
  */
 public class Solution {
 
@@ -34,7 +34,6 @@ public class Solution {
         /* Concatenate and print the String variables on a new line;
             the 's' variable above should be printed first. */
         System.out.println(s + s1);
-
 
         scan.close();
     }
