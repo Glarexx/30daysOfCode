@@ -1,5 +1,4 @@
 import java.util.*;
-import java.io.*;
 
 /**
  * @author Ievgenii Drozd
@@ -17,7 +16,6 @@ class Solution {
             String name = in.next();
             int phone = in.nextInt();
             phoneBook.put(name, phone);
-            // Write code here
         }
         while (in.hasNext()) {
             String s = in.next();
