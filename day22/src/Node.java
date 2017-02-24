@@ -1,7 +1,7 @@
 /**
  * @author Ievgenii Drozd
  * @version 2/23/17
- *          Day 23: BST Level-Order Traversal
+ *          Day 22: Binary Search Trees
  */
 class Node {
     Node left, right;

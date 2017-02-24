@@ -1,25 +1,29 @@
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 /**
  * @author Ievgenii Drozd
  * @version 2/23/17
- *          Day 22: Binary Search Trees
+ *          Day 23: BST Level-Order Traversal
  */
 public class Solution {
-    public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
-        int T = sc.nextInt();
-        Node root = null;
-        while (T-- > 0) {
-            int data = sc.nextInt();
-            root = insert(root, data);
-        }
-        System.out.println(getHeight(root));
-    }
+    private static void levelOrder(Node root) {
+        Queue<Node> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            Node head = queue.poll();
 
-    private static int getHeight(Node root) {
-        if (root == null) return -1;
-        return 1 + Math.max(getHeight(root.left), getHeight(root.right));
+            if (head == null) {
+                continue;
+            }
+
+            System.out.print(head.data + " ");
+
+            queue.offer(head.left);
+            queue.offer(head.right);
+        }
+        System.out.println();
     }
 
     private static Node insert(Node root, int data) {
@@ -36,5 +40,16 @@ public class Solution {
             }
             return root;
         }
+    }
+
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+        Node root = null;
+        while (T-- > 0) {
+            int data = sc.nextInt();
+            root = insert(root, data);
+        }
+        levelOrder(root);
     }
 }
