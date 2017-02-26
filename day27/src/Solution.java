@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
  */
 public class Solution {
     private static final int T = 5;
-    private static final String[] OUTPUTS = {"YES", "NO", "YES", "NO", "YES"};
+    private static final String[] arr = {"YES", "NO", "YES", "NO", "YES"};
     private static final int MIN_N = 4;
     private static final int MAX_N = 200;
     private static final int MIN_K = 3;
@@ -22,7 +22,7 @@ public class Solution {
         System.out.println(T);
 
         Set<Integer> historyN = new HashSet<>();
-        for (int tc = 0; tc < T; tc++) {
+        for (int i = 0; i < T; i++) {
             int N;
             do {
                 N = generateRandomInt(MIN_N, MAX_N);
@@ -33,7 +33,7 @@ public class Solution {
             System.out.println(N + " " + K);
 
             int attendance;
-            if (OUTPUTS[tc].equals("YES")) {
+            if (arr[i].equals("YES")) {
                 attendance = generateRandomInt(2, K - 1);
             } else {
                 attendance = generateRandomInt(K, N - 1);
